@@ -25,6 +25,10 @@
 <div class="container">
     <h2>Mengapa Memilih Nify?</h2>
     <p>Nify memberikan akses mudah ke berbagai produk digital dengan layanan API yang cepat dan aman.</p>
+    <div class="buttons">
+        <a href="api-doc.html">Pelajari Dokumentasi API</a>
+        <a href="download.html">Download Aplikasi</a>
+    </div>
 </div>
 
 <footer>
