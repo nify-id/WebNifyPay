@@ -11,7 +11,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 5%;
     background-color: #00274d;
 }
 
@@ -23,44 +23,67 @@ header nav .logo {
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    margin: 0;
 }
 
 header nav ul li {
-    display: inline;
+    position: relative;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: #ffd700; /* Warna Kuning */
     font-weight: 600;
+    padding-bottom: 5px;
 }
 
-header nav ul li a:hover {
-    color: #ffffff;
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
 }
 
-/* Content */
-.content {
-    padding: 40px 20px;
-    background-color: #ffffff; /* Latar Belakang Putih untuk Bagian Utama */
+header nav ul li a:hover::after {
+    width: 100%;
 }
 
-.intro {
-    text-align: center;
-    margin-bottom: 40px;
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%;
+    flex-direction: column; /* Default vertical layout */
 }
 
-.intro h1 {
+.hero-text {
+    max-width: 100%;
+    text-align: center; /* Centered text for better vertical alignment */
+}
+
+.hero h1 {
     font-size: 2.5em;
     color: #00274d;
     margin-bottom: 20px;
 }
 
-.intro p {
-    font-size: 1.1em;
+.hero p {
+    font-size: 1.2em;
     color: #555555;
     margin-bottom: 30px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 20px; /* Space between text and image */
 }
 
 .btn-main {
@@ -77,8 +100,25 @@ header nav ul li a:hover {
     background-color: #001f3f;
 }
 
+/* Media Queries for Horizontal Layout on Larger Screens */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row; /* Change to horizontal layout */
+        text-align: left;
+    }
+
+    .hero-text {
+        max-width: 50%;
+    }
+
+    .hero-image {
+        margin-top: 0; /* Remove margin when in horizontal layout */
+    }
+}
+
 /* Features Section */
 .features {
+    padding: 40px 5%;
     text-align: center;
 }
 
@@ -90,17 +130,18 @@ header nav ul li a:hover {
 
 .card-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 30px;
     flex-wrap: wrap;
 }
 
 .card {
-    background-color: #f0f0f0; /* Warna Latar Kartu Abu Terang */
+    background-color: #f9f9f9; /* Warna Latar Kartu Putih */
     padding: 20px;
     border-radius: 8px;
     width: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h3 {
@@ -115,14 +156,19 @@ header nav ul li a:hover {
     line-height: 1.6;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 /* Footer */
 footer {
     background-color: #00274d;
-    padding: 20px 0;
+    padding: 20px 5%;
     text-align: center;
     color: #cccccc;
     font-size: 0.9em;
-    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
