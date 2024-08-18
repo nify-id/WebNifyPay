@@ -1,8 +1,10 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff; /* Warna Latar Putih */
-    color: #333333; /* Warna Teks Gelap */
+    background-color: #ffffff;
+    /* Warna Latar Putih */
+    color: #000000;
+    /* Warna Teks Gelap */
     margin: 0;
     padding: 0;
 }
@@ -11,7 +13,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    padding: 10px 5%;
     background-color: #00274d;
 }
 
@@ -22,10 +24,14 @@ header nav {
 }
 
 header nav .logo {
-    width: 60px;  /* Lebar 60px */
-    height: 60px; /* Tinggi 60px */
-    object-fit: contain; /* Menjaga proporsi asli dari gambar */
-    margin-right: 15px; /* Jarak antara logo dan tombol menu */
+    width: 30px;
+    /* Lebar 60px */
+    height: 30px;
+    /* Tinggi 60px */
+    object-fit: contain;
+    /* Menjaga proporsi asli dari gambar */
+    margin-right: 15px;
+    /* Jarak antara logo dan tombol menu */
 }
 
 /* Dropdown Button */
@@ -36,14 +42,15 @@ header nav .logo {
 
 .dropbtn {
     background-color: #00274d;
-    color: #ffd700; /* Warna Kuning */
+    color: #ffd700;
+    /* Warna Kuning */
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 600;
     border: none;
     cursor: pointer;
     outline: none;
-    border-radius: 5px;
+    border-radius: 50px;
     transition: background-color 0.3s ease;
 }
 
@@ -61,7 +68,8 @@ header nav .logo {
     z-index: 1;
     border-radius: 5px;
     overflow: hidden;
-    left: 0; /* Posisi dropdown berada tepat di bawah tombol */
+    left: 0;
+    /* Posisi dropdown berada tepat di bawah tombol */
 }
 
 /* Links inside the dropdown */
@@ -90,12 +98,14 @@ header nav .logo {
     align-items: center;
     justify-content: space-between;
     padding: 40px 5%;
-    flex-direction: column; /* Default vertical layout */
+    flex-direction: column;
+    /* Default vertical layout */
 }
 
 .hero-text {
     max-width: 100%;
-    text-align: center; /* Centered text for better vertical alignment */
+    text-align: center;
+    /* Centered text for better vertical alignment */
 }
 
 .hero h1 {
@@ -114,7 +124,8 @@ header nav .logo {
     width: 100%;
     max-width: 500px;
     height: auto;
-    margin-top: 20px; /* Space between text and image */
+    margin-top: 20px;
+    /* Space between text and image */
 }
 
 .btn-main {
@@ -134,7 +145,8 @@ header nav .logo {
 /* Media Queries for Horizontal Layout on Larger Screens */
 @media (min-width: 768px) {
     .hero {
-        flex-direction: row; /* Change to horizontal layout */
+        flex-direction: row;
+        /* Change to horizontal layout */
         text-align: left;
     }
 
@@ -143,7 +155,8 @@ header nav .logo {
     }
 
     .hero-image {
-        margin-top: 0; /* Remove margin when in horizontal layout */
+        margin-top: 0;
+        /* Remove margin when in horizontal layout */
     }
 }
 
@@ -167,7 +180,8 @@ header nav .logo {
 }
 
 .card {
-    background-color: #f9f9f9; /* Warna Latar Kartu Putih */
+    background-color: #ebebeb;
+    /* Warna Latar Kartu Putih */
     padding: 20px;
     border-radius: 8px;
     width: 280px;
@@ -182,7 +196,7 @@ header nav .logo {
 }
 
 .card p {
-    color: #666666;
+    color: #000000;
     font-size: 1em;
     line-height: 1.6;
 }
@@ -191,6 +205,35 @@ header nav .logo {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+
+.download-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    /* Warna hijau yang sesuai dengan Android */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-main i {
+    margin-right: 8px;
+}
+
+.btn-main:hover {
+    background-color: #45a049;
+    /* Warna hijau sedikit lebih gelap untuk efek hover */
+}
+
 
 /* Footer */
 footer {
