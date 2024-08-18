@@ -128,19 +128,35 @@ header nav .logo {
     /* Space between text and image */
 }
 
+
+
+.download-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .btn-main {
-    background-color: #00274d;
-    color: #ffffff;
-    padding: 10px 20px;
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    /* Warna hijau yang sesuai dengan Android */
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 600;
     transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-main i {
+    margin-right: 8px;
 }
 
 .btn-main:hover {
-    background-color: #001f3f;
+    background-color: #45a049;
+    /* Warna hijau sedikit lebih gelap untuk efek hover */
 }
+
 
 /* Media Queries for Horizontal Layout on Larger Screens */
 @media (min-width: 768px) {
@@ -206,33 +222,6 @@ header nav .logo {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
-.download-buttons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.btn-main {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #4CAF50;
-    /* Warna hijau yang sesuai dengan Android */
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-}
-
-.btn-main i {
-    margin-right: 8px;
-}
-
-.btn-main:hover {
-    background-color: #45a049;
-    /* Warna hijau sedikit lebih gelap untuk efek hover */
-}
 
 
 /* Footer */
