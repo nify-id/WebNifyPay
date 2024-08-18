@@ -15,42 +15,73 @@ header nav {
     background-color: #00274d;
 }
 
-header nav .logo {
-    width: 120px;
-    height: auto;
-}
-
-header nav ul {
-    list-style: none;
+/* New container for logo and menu button */
+.logo-menu-container {
     display: flex;
-    gap: 30px;
-    margin: 0;
+    align-items: center;
 }
 
-header nav ul li {
+header nav .logo {
+    width: 60px;  /* Lebar 60px */
+    height: 60px; /* Tinggi 60px */
+    object-fit: contain; /* Menjaga proporsi asli dari gambar */
+    margin-right: 15px; /* Jarak antara logo dan tombol menu */
+}
+
+/* Dropdown Button */
+.dropdown {
     position: relative;
+    display: inline-block;
 }
 
-header nav ul li a {
-    text-decoration: none;
+.dropbtn {
+    background-color: #00274d;
     color: #ffd700; /* Warna Kuning */
+    padding: 10px 20px;
+    font-size: 16px;
     font-weight: 600;
-    padding-bottom: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-header nav ul li a::after {
-    content: '';
+.dropbtn:hover {
+    background-color: #001f3f;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: #ffd700;
-    transition: width 0.3s ease;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    left: 0; /* Posisi dropdown berada tepat di bawah tombol */
 }
 
-header nav ul li a:hover::after {
-    width: 100%;
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #00274d;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Hero Section */
